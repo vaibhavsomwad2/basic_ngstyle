@@ -5,8 +5,7 @@
                     'text-info':!isproductAvaible,
                      'p-4':isproductAvaible,
                     'p-3':!isproductAvaible,
-                    'font-italic':isproductAvaible,
-                    'font-weight-lighter':!isproductAvaible
+                    'font-italic':isproductAvaible
                 }">
                 this is productName {{productname}} with product Id : {{producId}}
     <span *ngIf="isproductAvaible; else productAvai">
