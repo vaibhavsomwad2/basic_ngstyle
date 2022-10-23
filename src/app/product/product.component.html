@@ -1,0 +1,26 @@
+<!-- <p>this is productName samsung with product Id : 123</p> -->
+<!-- <p [ngStyle]="{'background-color':this.isproductAvaible ? 'orange' : '#ccc',color:'white'}">this is productName {{productname}} with product Id : {{producId}} -->
+    <p [ngStyle]="{backgroundColor: getBgColor()}"
+     [ngClass]="{'text-white':isproductAvaible,
+                    'text-info':!isproductAvaible,
+                     'p-4':isproductAvaible,
+                    'p-3':!isproductAvaible,
+                    'font-italic':isproductAvaible,
+                    'font-weight-lighter':!isproductAvaible
+                }">
+                this is productName {{productname}} with product Id : {{producId}}
+    <span *ngIf="isproductAvaible; else productAvai">
+        product is Available
+    </span>
+    <ng-template #productAvai>
+        <span>product is Not Available</span>
+    </ng-template>
+</p>
+
+<!-- <p [innerText]="productname"></p> -->
+<p [innerHTML]="productname"></p>
+
+<p [innerText]="'Iphone'"></p>
+
+<!-- <input type="text" class="form-control" [value]="productname"> -->
+<input type="text" class="form-control" [value]="getproductValue()">

@@ -1,0 +1,19 @@
+
+
+<!-- <label for="pSearch">Product Name</label> -->
+<input type="text" id="pSearch" class="form-control" (input)="onproductSearch($event)">
+
+<label for="pSearch">Product Name</label>
+<input type="text" id="pSearch" class="form-control" [(ngModel)]="productSearch">
+
+<!-- <p >{{productSearch}}</p> -->
+
+<button class="btn btn-outline-success my-3" 
+[disabled]="isDisabled" 
+(click)="getNewProductStatus()">
+Add Product 
+</button>
+
+<p class="alert alert-info">{{productSatus}}</p>
+<app-product></app-product>
+
